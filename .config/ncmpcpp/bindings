@@ -1,0 +1,48 @@
+def_key "j"
+  scroll_down
+
+def_key "k"
+  scroll_up
+
+def_key "h"
+  previous_column
+
+def_key "h"
+  master_screen
+
+def_key "l"
+  next_column
+
+def_key "l"
+  slave_screen
+
+def_key "n"
+  next_found_item
+
+def_key "N"
+  previous_found_item
+
+
+def_key "tab"
+  show_lyrics
+
+def_key "space"
+  show_visualizer
+
+def_key "d"
+  delete_playlist_items
+
+def_key "2"
+  show_media_library
+
+def_key "3"
+  show_playlist_editor
+
+def_key "4"
+  show_browser
+
+def_key "v"
+  select_item
+
+def_key "p"
+  move_selected_items_to

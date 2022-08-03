@@ -1,0 +1,70 @@
+# Restart hotkey daemon
+control + shift + alt + h
+  pkill -USR1 -x sxhkd && notify-send "sxhkd Restarted"
+
+# Toggle polybar visibility
+control + alt + p
+  $HOME/scripts/toggle-polybar.sh
+
+# Screenshot display
+F8
+  $HOME/scripts/screenshot.sh
+
+# Screenshot selection
+shift + F8
+  $HOME/scripts/screenshot.sh select
+
+# Screenshot window
+control + F8
+  $HOME/scripts/screenshot.sh window
+
+# Random wallpaper
+F12
+  feh --bg-fill --randomize ~/.wallpapers/Alena\ Aenami/*
+  feh --bg-fill --randomize ~/.wallpapers/Reddit/*
+  feh --bg-fill --randomize ~/.wallpapers/space/*
+  feh --bg-fill --randomize ~/.wallpapers/digital\ art/*
+  feh --bg-fill --randomize ~/.wallpapers/pines/
+  feh --bg-fill --randomize ~/.wallpapers/nature/*
+  feh --bg-fill --randomize ~/.wallpapers/pixel-art/*
+  feh --bg-fill --randomize ~/.wallpapers/Yucong\ Tang/*
+  feh --bg-fill --randomize ~/.wallpapers/Philipp\ A.\ Urlich/*
+  feh --bg-fill --randomize ~/.wallpapers/Chris\ Doretz/*
+
+# Disable Wallpaper
+shift + F12
+  feh --bg-fill ~/.wallpapers/#000000.png
+  feh --bg-fill ~/.wallpapers/#0C0C0D.png
+
+# Show desktop apps
+alt + d
+  rofi -show run
+
+# Show desktop apps
+alt + shift + d 
+  rofi -show drun
+
+# Open Visualizer
+alt + v
+  kitty ncmpcpp --config ~/.config/ncmpcpp/visualizer_only
+
+
+# Open Visualizer
+alt + backslash
+  qutebrowser
+
+# Show emojis
+alt + period
+  rofi -show emoji
+
+# Open color picker
+alt + shift + c
+  gpick -o -s --no-newline | xclip -sel c
+
+# Volume control
+alt + {Prior,Next}
+    amixer sset Master {5%+,5%-} unmute
+
+# Play pause
+alt + p
+  mpc toggle

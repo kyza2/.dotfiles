@@ -1,0 +1,12 @@
+configuration {
+  /* font: "InputMonoCondensed Medium 9"; */
+  font: "Monospace 9";
+  /* font: "mononoki Nerd Font Mono Padded 11"; */
+  show-icons: false;
+  display-drun: " ";
+  display-run: "❯ ";
+  display-window: "";
+}
+
+/* @theme "themes/polybar-top.rasi" */
+@theme "themes/polybar-bottom.rasi"
