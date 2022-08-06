@@ -14,9 +14,13 @@ PS1='%F{green}[%n@%m %/]%F{248} $ '
 
 RPROMPT='$(parse_git_branch)'
 
+alias g="lazygit"
+
 alias ls="lsd"
 alias la="lsd -a"
 alias lt="ls --tree"
+
+alias feh="feh --bg-fill"
 
 alias ..="cd .."
 

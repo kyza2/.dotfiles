@@ -20,14 +20,14 @@ control + F8
 
 # Random wallpaper
 F12
-  feh --bg-fill --randomize ~/.wallpapers/Alena\ Aenami/*
   feh --bg-fill --randomize ~/.wallpapers/Reddit/*
-  feh --bg-fill --randomize ~/.wallpapers/space/*
-  feh --bg-fill --randomize ~/.wallpapers/digital\ art/*
-  feh --bg-fill --randomize ~/.wallpapers/pines/
-  feh --bg-fill --randomize ~/.wallpapers/nature/*
-  feh --bg-fill --randomize ~/.wallpapers/pixel-art/*
+  feh --bg-fill --randomize ~/.wallpapers/Alena\ Aenami/*
   feh --bg-fill --randomize ~/.wallpapers/Yucong\ Tang/*
+  feh --bg-fill --randomize ~/.wallpapers/pines/
+  feh --bg-fill --randomize ~/.wallpapers/digital\ art/*
+  feh --bg-fill --randomize ~/.wallpapers/nature/*
+  feh --bg-fill --randomize ~/.wallpapers/space/*
+  feh --bg-fill --randomize ~/.wallpapers/pixel-art/*
   feh --bg-fill --randomize ~/.wallpapers/Philipp\ A.\ Urlich/*
   feh --bg-fill --randomize ~/.wallpapers/Chris\ Doretz/*
 

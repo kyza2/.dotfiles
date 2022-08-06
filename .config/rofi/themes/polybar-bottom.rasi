@@ -23,7 +23,7 @@ window {
   x-offset: -29.2%;
 
   width: 800px;
-  height: 24px;
+  height: 27px;
 
   background-color: @bg0;
 }
