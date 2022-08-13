@@ -1,11 +1,11 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/evan/projects/code-ark
+- /home/evan/projects/codeark
 - /home/evan/.config/nvim
+- /home/evan/projects/pomodoro
 - /home/evan
 - /home/evan/github/palette.lua
-- /home/evan/projects/256-color-match
-- /home/evan/install.sh
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false

@@ -1,7 +1,5 @@
 configuration {
-  /* font: "InputMonoCondensed Medium 9"; */
-  font: "Monospace 9";
-  /* font: "mononoki Nerd Font Mono Padded 11"; */
+  font: "InputMonoCondensed Padded 12";
   show-icons: false;
   display-drun: " ";
   display-run: "❯ ";

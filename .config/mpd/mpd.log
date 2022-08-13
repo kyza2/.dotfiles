@@ -2431,3 +2431,25 @@ Aug 04 06:16 : player: played "Frank Ocean - Nights.mp3"
 Aug 04 06:24 : player: played "God In Wilson.mp3"
 Aug 04 18:28 : player: played "what lsd actually feels like (feat. meat computer).mp3"
 Aug 06 14:52 : player: played "Me and the Birds.mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/I Dreamt I Saw You In A Dream.mp3; Failed to open '/home/evan/music/I Dreamt I Saw You In A Dream.mp3': No such file or directory
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/what lsd actually feels like (feat. meat computer).mp3; Failed to open '/home/evan/music/what lsd actually feels like (feat. meat computer).mp3': No such file or directory
+Aug 06 17:08 : player: played "I Dreamt I Saw You In A Dream.mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/what lsd actually feels like (feat. meat computer).mp3; Failed to open '/home/evan/music/what lsd actually feels like (feat. meat computer).mp3': No such file or directory
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/The Eyes of Ibad.mp3; Failed to open '/home/evan/music/The Eyes of Ibad.mp3': No such file or directory
+Aug 06 17:08 : player: played "what lsd actually feels like (feat. meat computer).mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/The Eyes of Ibad.mp3; Failed to open '/home/evan/music/The Eyes of Ibad.mp3': No such file or directory
+Aug 06 17:08 : player: played "The Eyes of Ibad.mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/Games.mp3; Failed to open '/home/evan/music/Games.mp3': No such file or directory
+Aug 06 17:08 : player: played "Games.mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/Dijon - Many Times (Official Video).mp3; Failed to open '/home/evan/music/Dijon - Many Times (Official Video).mp3': No such file or directory
+Aug 06 17:08 : player: played "Dijon - Many Times (Official Video).mp3"
+Aug 06 17:08 : exception: Failed to decode /home/evan/music/Coconut Mango.mp3; Failed to open '/home/evan/music/Coconut Mango.mp3': No such file or directory
+Aug 06 17:08 : player: played "Coconut Mango.mp3"
+Aug 06 17:09 : exception: Failed to decode /home/evan/music/CAPRICE.mp3; Failed to open '/home/evan/music/CAPRICE.mp3': No such file or directory
+Aug 06 17:09 : player: played "CAPRICE.mp3"
+Aug 06 17:17 : exception: Failed to decode /home/evan/music/Mookid.mp3; Failed to open '/home/evan/music/Mookid.mp3': No such file or directory
+Aug 06 17:17 : player: played "Mookid.mp3"
+Aug 06 17:31 : exception: Failed to decode /home/evan/music/CAPRICE.mp3; Failed to open '/home/evan/music/CAPRICE.mp3': No such file or directory
+Aug 06 17:31 : player: played "CAPRICE.mp3"
+Aug 06 17:31 : exception: Failed to decode /home/evan/music/Mookid.mp3; Failed to open '/home/evan/music/Mookid.mp3': No such file or directory
+Aug 06 17:31 : player: played "Mookid.mp3"

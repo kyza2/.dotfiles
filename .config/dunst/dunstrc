@@ -11,8 +11,8 @@
     width = (0, 400)
     height = 300
 
-    origin = top-center
-    offset = 31x1
+    origin = bottom-right
+    offset = 15x27
 
     notification_limit = 3
 
@@ -48,10 +48,10 @@
     separator_height = 1
 
     # Padding between text and separator.
-    padding = 2
+    padding = 8
 
     # Horizontal padding.
-    horizontal_padding = 2
+    horizontal_padding = 10
 
     # Padding between text and icon.
     text_icon_padding = 0
@@ -84,7 +84,7 @@
     ### Text ###
 
     # font = InputMonoCondensed 5
-    font = InputMonoCondensed 5
+    font = Monospace 7
     # font = Terminus (TTF) 4.8
 
     # The spacing between lines.  If the height is smaller than the
@@ -265,8 +265,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    # background = "#16181C"
-    background = "#000000"
+    background = "#16181C"
     foreground = "##ABB2BF"
     frame_color = "#1E2127"
     timeout = 1
@@ -274,7 +273,7 @@
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#16181C00"
+    background = "#16181C"
     foreground = "#ABB2BF"
     frame_color = "#1E2127"
     timeout = 2

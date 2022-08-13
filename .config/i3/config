@@ -29,7 +29,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+shift+Return exec i3-sensible-terminal
 # bindsym $mod+Return exec kitty
-bindsym $mod+Return exec ~/kitty/kitty/launcher/kitty
+bindsym $mod+Return exec ~/kitty/kitty.app/bin/kitty
 
 # kill focused window bindsym $mod+Shift+q kill
 bindsym $mod+q kill

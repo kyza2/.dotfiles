@@ -14,6 +14,8 @@ PS1='%F{green}[%n@%m %/]%F{248} $ '
 
 RPROMPT='$(parse_git_branch)'
 
+RUST_BACKTRACE=1
+
 alias g="lazygit"
 
 alias ls="lsd"
@@ -25,4 +27,12 @@ alias feh="feh --bg-fill"
 alias ..="cd .."
 
 alias .nv="cd ~/.config/nvim/"
+alias .gn="cd ~/.config/goneovim/"
 
+alias gn="~/goneovim/goneovim -u ~/.config/goneovim/nvim/init.lua"
+alias nv="nvim"
+alias vi="nv"
+
+alias icat="kitty +kitten icat"
+
+source /usr/share/nvm/init-nvm.sh

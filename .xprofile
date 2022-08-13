@@ -1,6 +1,8 @@
 xrandr -s 1920x1080
 xset r rate 168 80
 
+feh --bg-fill --randomize ~/.wallpapers/*
+
 VBoxClient-all
 
 systemctl --user start mpd
