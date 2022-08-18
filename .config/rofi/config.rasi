@@ -1,10 +1,11 @@
 configuration {
   font: "InputMonoCondensed Padded 12";
+  /* font: "Fantasque Sans Mono 10"; */
   show-icons: false;
   display-drun: " ";
-  display-run: "❯ ";
+  display-run: "";
   display-window: "";
 }
 
-/* @theme "themes/polybar-top.rasi" */
-@theme "themes/polybar-bottom.rasi"
+@theme "themes/polybar-top.rasi"
+/* @theme "themes/polybar-bottom.rasi" */

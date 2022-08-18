@@ -51,7 +51,7 @@ alt + v
 
 # Open Visualizer
 alt + backslash
-  qutebrowser
+  emacs
 
 # Show emojis
 alt + period

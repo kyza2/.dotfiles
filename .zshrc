@@ -27,11 +27,11 @@ alias feh="feh --bg-fill"
 alias ..="cd .."
 
 alias .nv="cd ~/.config/nvim/"
+alias .e="cd ~/.config/emacs/"
 alias .gn="cd ~/.config/goneovim/"
 
 alias gn="~/goneovim/goneovim -u ~/.config/goneovim/nvim/init.lua"
 alias nv="nvim"
-alias vi="nv"
 
 alias icat="kitty +kitten icat"
 

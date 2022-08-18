@@ -20,9 +20,7 @@ window {
   location: south;
   anchor: south;
 
-  x-offset: -29.2%;
-
-  width: 800px;
+  width: 1920px;
   height: 27px;
 
   background-color: @bg0;

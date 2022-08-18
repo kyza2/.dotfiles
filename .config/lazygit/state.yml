@@ -1,8 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
 - /home/evan/projects/codeark
-- /home/evan/.config/nvim
 - /home/evan/projects/pomodoro
+- /home/evan/github/summer-time
+- /home/evan/.config/nvim
 - /home/evan
 - /home/evan/github/palette.lua
 startuppopupversion: 5
