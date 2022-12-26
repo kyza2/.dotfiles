@@ -1,11 +1,10 @@
 configuration {
-  font: "InputMonoCondensed Padded 12";
-  /* font: "Fantasque Sans Mono 10"; */
-  show-icons: false;
-  display-drun: " ";
-  display-run: "";
-  display-window: "";
+  font: "Cartograph CF 10.6";
+
+  display-drun: "";
+  show-icons: true;
+
+  drun-display-format: "{icon} {name}";
 }
 
 @theme "themes/polybar-top.rasi"
-/* @theme "themes/polybar-bottom.rasi" */

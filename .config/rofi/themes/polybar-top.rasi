@@ -1,14 +1,11 @@
 * {
-  bg0: #0C0C0D;
-  bg1: #13181E;
-  fg1: #A6ABB8;
-  fg0: #5C6370;
-
+  bg0: #121316;
+  bg1: #121316;
+  fg1: #CED2DA;
+  fg0: #888888;
   background-color: transparent;
-
   text-color: @fg0;
   text-style: none;
-
   accent: #4D8DDE;
 }
 
@@ -20,12 +17,10 @@ mainbox {
 window {
   location: north;
   anchor: north;
-
-  /* x-offset: -29.2%; */
-
   width: 1920px;
-  height: 27px;
-
+  height: 44px;
+  y-offset: 0;
+  x-offset: 0;
   background-color: @bg0;
 }
 
@@ -34,26 +29,25 @@ listview {
 }
 
 inputbar {
-  padding: 4px 8px;
-  width: 150px;
-
-  background-color: @bg1;
+  width: 200px;
+  padding: 17px 0px 0px 0px;
+  margin: 0px 20px 6px 16px;
 }
 
 entry {
-  text-color: @fg1;
+  text-color: @fg0;
 }
 
 prompt {
-  text-color: @accent;
-  padding: 2px 0 0 0;
-  font: "Symbols Nerd Font 8";
+  text-color: @fg0;
+  font: "Symbols Nerd Font 14";
+  padding: -2px 14px 0px 0px;
+  margin: 0px 2px 0px 0px;
 }
 
 element {
-  padding: 4px 8px;
+  padding: 18px 60px 0px 0px;
 }
-
 
 element selected normal, element selected active {
   text-color: @fg1;

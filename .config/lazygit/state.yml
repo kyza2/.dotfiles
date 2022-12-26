@@ -1,12 +1,15 @@
 lastupdatecheck: 0
 recentrepos:
-- /home/evan/projects/codeark
-- /home/evan/projects/pomodoro
-- /home/evan/github/summer-time
+- /home/evan/plugins/imagine.nvim
+- /home/evan/plugins/harmony.nvim
 - /home/evan/.config/nvim
-- /home/evan
-- /home/evan/github/palette.lua
+- /home/evan/.local/share/lunarvim/lvim
+- /home/evan/plugins/caution.nvim
+- /home/evan/plugins/palette.lua
+- /home/evan/open-source/vimage.nvim
+- /home/evan/projects/portfolio-2022
+- /home/evan/projects/codeark
+- /home/evan/github/pizza-toppings
 startuppopupversion: 5
-customcommandshistory:
-- q
+customcommandshistory: []
 hidecommandlog: false
