@@ -1,0 +1,160 @@
+# Toggle polybar
+ctrl + alt + p
+  { \
+    polybar-msg cmd show; bspc config -m Virtual1 top_padding 45; bspc config window_gap 44, \
+    polybar-msg cmd hide; bspc config -m Virtual1 top_padding 0; bspc config window_gap 0 \
+  }
+
+# Toggle fullscreen
+F11
+  { \
+    bspc node -t '~fullscreen'; polybar-msg cmd hide, \
+    bspc node -t '~fullscreen'; polybar-msg cmd show \
+  }
+
+# Change background
+F12
+  feh --bg-fill --randomize ~/.wallpapers/*
+
+# Screenshot selection
+alt + s
+  ~/scripts/scrot.sh select
+
+# Screenshot window
+alt + shift + s
+  ~/scripts/scrot.sh window
+
+# Run programs
+alt + d
+  rofi -show drun
+
+# Run programs
+alt + shift + d
+  rofi -show run
+
+# Play/pause song
+alt + p
+  playerctl play-pause
+
+# Emoji menu
+alt + period
+  rofi -modi emoji -show emoji -emoji-format '\{emoji\} <span weight="bold">\{name\}</span>[ <span size="small">(\{keywords\})</span>]'
+
+# Volume control
+alt + {Prior,Next}
+   amixer sset Master {5%+,5%-} unmute
+
+
+# Launch Gpick
+alt + shift + c
+  gpick -o -s --no-newline | xclip -sel c
+
+# Launch Kitty
+alt + Return
+	kitty
+
+# Terminal emulator fallback
+alt + shift + Return
+	xterm -sh 1.4 -bg "#0F1010" -fg "#aaaaaa"
+
+# Center screen
+alt + c
+  ~/scripts/center.sh
+
+# WM independent hotkeys
+
+# Program launcher
+alt + @space
+	dmenu_run
+
+# Extract text
+alt + t
+  convert x: -modulate 100,0 -resize 400% -set density 300 png:- | tesseract stdin stdout | xclip -selection clipboard
+
+# Make SXHKD reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# BSPWM hotkeys
+
+# Quit/restart BSPWM
+alt + shift + r
+	bspc wm -r
+
+# Close and kill
+alt + {_,shift + }q
+	bspc node -{c,k}
+
+# Send the newest marked node to the newest preselected node
+alt + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# Swap the current node and the biggest window
+alt + g
+	bspc node -s biggest.window
+
+# Set the window state
+alt + f
+	bspc node -t {floating, tiled} | xdo resize -w 900 | xdo resize -h 900
+
+alt + e
+	bspc node -t tiled
+
+# Set the node flags
+alt + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+# Focus the node in the given direction
+alt + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Focus the node for the given path jump
+alt + {p,b,comma,period}
+	bspc node -f @{parent,brother,first,second}
+
+# Focus the next/previous window in the current desktop
+alt + {_,shift + }c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# Focus the last node/desktop
+alt + {grave,Tab}
+	bspc {node,desktop} -f last
+
+alt + o
+  { \
+    bspc config window_gap 0; bspc config -m Virtual1 top_padding 0, \
+    bspc config window_gap 44; bspc config -m Virtual1 top_padding 42 \
+  }
+
+alt + shift + o
+  bspc config border_width { 0, 0 }
+
+# Focus or send to the given desktop
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+# Resize splits
+alt + ctrl + { h, j, k, l }
+  { \
+    bspc node @parent/second -z left -20 0; bspc node @parent/first -z right -20 0, \
+    bspc node @parent/second -z top 0 +1; bspc node @parent/first -z bottom 0 +1, \
+    bspc node @parent/first -z bottom 0 -3; bspc node @parent/second -z top 0 -1, \
+    bspc node @parent/first -z right +20 0; bspc node @parent/second -z left +20 \
+  }
+
+# Move floating windows
+alt + r : {h, j, k, l}
+  bspc node -v {-10 0, 0 10, 0 -10, 10 0} 
+
+# Preselect windows
+alt + w : {h, j, k, l}
+  { \
+    bspc node -p west;  xte 'key Escape', \
+    bspc node -p south; xte 'key Escape', \
+    bspc node -p north; xte 'key Escape', \
+    bspc node -p east;  xte 'key Escape', \
+  }
+
+# Resize floating windows
+alt + r : alt + {h,j,k,l}
+	bspwm_resize.sh {west,south,north,east}

@@ -1,1 +1,13 @@
-/home/evan/.xprofile
+# Set resolution
+xrandr -s 1920x1080
+
+# Set repeat rate
+xset r rate 190 110
+
+# VitualBox intergration
+VBoxClient-all
+
+# Set background
+feh --bg-fill ~/.wallpapers/#0B0D0F.png
+
+export PATH="$HOME/.local/bin:$PATH"
