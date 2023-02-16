@@ -1,3 +1,1 @@
-[ -f ~/.xprofile ] && . ~/.xprofile
-[ -f ~/.xresources ] && . ~/.xresources
-
+/home/evan/.xinitrc
