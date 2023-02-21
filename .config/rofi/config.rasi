@@ -1,10 +1,11 @@
 configuration {
-  font: "CHNO Pixel Code Pro Regular 7.3";
+  font: "NKDuy Mono Bold 8.3";
 
-  display-drun: "";
+  display-drun: "";
+  display-emoji: "";
   drun-display-format: "{icon} {name}";
 
-  show-icons: false;
+  show-icons: true;
 }
 
 @theme "theme"

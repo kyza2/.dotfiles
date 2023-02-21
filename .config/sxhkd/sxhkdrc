@@ -15,6 +15,7 @@ F11
 # Change background
 F12
   feh --bg-fill --randomize ~/.wallpapers/*
+  feh --bg-fill --randomize ~/.wallpapers/simon-stalenhag/*
 
 # Screenshot selection
 alt + s
@@ -38,7 +39,7 @@ alt + p
 
 # Emoji menu
 alt + period
-  rofi -modi emoji -show emoji -emoji-format '\{emoji\} <span weight="bold">\{name\}</span>[ <span size="small">(\{keywords\})</span>]'
+  rofi -theme ~/.config/rofi/emoji-theme.rasi -modi emoji -show emoji -emoji-format '\{emoji\}'
 
 # Volume control
 alt + {Prior,Next}
@@ -55,11 +56,7 @@ alt + Return
 
 # Terminal emulator fallback
 alt + shift + Return
-	xterm -sh 1.4 -bg "#0F1010" -fg "#aaaaaa"
-
-# Center screen
-alt + c
-  ~/scripts/center.sh
+	xterm -sh 1.4 -fa "NKDuy Mono" -fs 7 -bg "#0F1010" -fg "#aaaaaa"
 
 # WM independent hotkeys
 
@@ -122,8 +119,8 @@ alt + {grave,Tab}
 
 alt + o
   { \
-    bspc config window_gap 0; bspc config -m Virtual1 top_padding 0, \
-    bspc config window_gap 44; bspc config -m Virtual1 top_padding 42 \
+    bspc config window_gap 0; bspc config -m Virtual1 top_padding 53, \
+    bspc config window_gap 46; bspc config -m Virtual1 top_padding 42 \
   }
 
 alt + shift + o

@@ -1,5 +1,3 @@
-# export TERM="xterm-256color"
-
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 
@@ -10,7 +8,7 @@ parse_git_branch() {
 setopt PROMPT_SUBST
 
 PS1=' %F{magenta}%/%F{white}$(parse_git_branch)
-%F{green}%  > %F{white}'
+%F{green}%  -> %F{white}'
 
 alias g="lazygit"
 

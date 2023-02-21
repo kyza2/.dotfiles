@@ -3,15 +3,17 @@
   monitor = 0
   follow = none
 
-  width = (0, 400)
+  width = (0, 800)
   height = 300
 
   origin = bottom-right
   offset = 5x20
 
+  gap_size = 10
+
   frame_width = 1
   frame_color = "#aaaaaa"
-  corner_radius = 0
+  corner_radius = 3
 
   transparency = [0, 100]
 
@@ -25,19 +27,15 @@
 
   indicate_hidden = yes
 
-  separator_height = 1
-
-  padding = 10
-  horizontal_padding = 10
-  text_icon_padding = 0
-
-  separator_color = frame
+  padding = 6
+  horizontal_padding = 7
+  text_icon_padding = 9
 
   sort = yes
 
-  font = Jetbrains Mono 12
+  font = NKDuy Mono Bold 4.5
 
-  line_height = 0
+  line_height = 6
 
   markup = full
   format = "<b>%s</b>\n%b"
@@ -53,9 +51,10 @@
 
   show_indicators = yes
 
-  icon_position = left
   min_icon_size = 0
   max_icon_size = 32
+
+  icon_position = left
   icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
   # Maximum amount of notifications kept in history
@@ -84,19 +83,19 @@
   per_monitor_dpi = false
 
 [urgency_low]
-  background = "#16181C"
-  foreground = "#ABB2BF"
-  frame_color = "#1E2127"
-  timeout = 1
+  background = "#0b1014"
+  foreground = "#637799"
+  frame_color = "#151e26"
+  timeout = 2
 
 [urgency_normal]
-  background = "#16181C"
-  foreground = "#ABB2BF"
-  frame_color = "#1E2127"
-  timeout = 2
+  background = "#0b1014"
+  foreground = "#637799"
+  frame_color = "#151e26"
+  timeout = 3
 
 [urgency_critical]
   background = "#900000"
-  foreground = "#ffffff"
+  foreground = "#72777f"
   frame_color = "#ff0000"
   timeout = 0
