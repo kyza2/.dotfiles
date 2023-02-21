@@ -1,8 +1,27 @@
+if [ "$GREETED" != "true" ]; then
+    # Display greeting
+    echo "
+
+    █████   ████  ███   █████     █████
+   ░░███   ███░  ░░░   ░░███     ░░███
+    ░███  ███    ████  ███████   ███████   █████ ████
+    ░███████    ░░███ ░░░███░   ░░░███░   ░░███ ░███
+    ░███░░███    ░███   ░███      ░███     ░███ ░███
+    ░███ ░░███   ░███   ░███ ███  ░███ ███ ░███ ░███
+    █████ ░░████ █████  ░░█████   ░░█████  ░░███████
+   ░░░░░   ░░░░ ░░░░░    ░░░░░     ░░░░░    ░░░░░███
+                                            ███ ░███
+                                           ░░██████
+                                            ░░░░░░
+    "
+    export GREETED=true
+fi
+
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
 
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
 }
 
 setopt PROMPT_SUBST
@@ -34,3 +53,4 @@ alias icat="kitty +kitten icat"
 
 # image=$(find ~/kitty_startup/ -type f | shuf -n 1)
 # icat $image
+#
