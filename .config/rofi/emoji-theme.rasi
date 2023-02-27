@@ -4,7 +4,7 @@ configuration {
 
 * {
   bg0: #101318;
-  bg1: #29303d;
+  bg1: #1d222b;
 
   fg0: #4c5566;
   fg1: #637799;
@@ -35,7 +35,7 @@ window {
 
   background-color: @bg0;
 
-  border: 2px;
+  border: 1px;
   border-color: @bg1;
 }
 
@@ -47,7 +47,7 @@ listview {
 
 inputbar {
   width: 200px;
-  border: 0px 0px 2px 0px;
+  border: 0px 0px 1px 0px;
   border-color: @bg1;
 
   padding: 17px 0px 17px 20px;
@@ -55,7 +55,7 @@ inputbar {
 }
 
 entry {
-  font: "NKDuy Mono Bold 8";
+  font: "NKDuy Mono Bold 8.3";
   text-color: @fg1;
 }
 
@@ -72,6 +72,7 @@ element {
 }
 
 element selected normal, element selected active {
+  border-radius: 8px;
   background-color: @bg1;
   text-color: @fg1;
 }

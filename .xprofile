@@ -7,7 +7,10 @@ xset r rate 190 110
 # VitualBox intergration
 VBoxClient-all
 
-# Set background
-feh --bg-fill ~/.wallpapers/#0B0D0F.png
+picom &
+
+# Set Theme
+wal -R
 
 export PATH="$HOME/.local/bin:$PATH"
+

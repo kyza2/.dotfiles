@@ -22,10 +22,12 @@ F11
     bspc node -t '~fullscreen'; polybar-msg cmd show \
   }
 
-# Change background
+# Change Theme
 F12
-  feh --bg-fill --randomize ~/.wallpapers/*
-  feh --bg-fill --randomize ~/.wallpapers/simon-stalenhag/*
+  wal_random.sh ~/.wallpapers/
+
+# F12
+#   wal -i ~/.wallpapers/ | pkill dunst
 
 # Screenshot selection
 alt + s
@@ -66,7 +68,7 @@ alt + Return
 
 # Terminal emulator fallback
 alt + shift + Return
-	xterm -sh 1.4 -fa "NKDuy Mono" -fs 7 -bg "#0F1010" -fg "#aaaaaa"
+	xterm -sh 1 -fa "NKDuy Mono" -fs 8.3 -bg "#0F1010" -fg "#aaaaaa"
 
 # WM independent hotkeys
 
@@ -102,7 +104,7 @@ alt + g
 
 # Set the window state
 alt + f
-	bspc node -t {floating, tiled} | xdo resize -w 900 | xdo resize -h 900
+	bspc node -t {floating, tiled} | xdo resize -w 900 | xdo resize -h 891
 
 alt + e
 	bspc node -t tiled
@@ -129,8 +131,8 @@ alt + {grave,Tab}
 
 alt + o
   { \
-    bspc config window_gap 0; bspc config -m Virtual1 top_padding 53, \
-    bspc config window_gap 46; bspc config -m Virtual1 top_padding 42 \
+    bspc config window_gap 13; bspc config -m Virtual1 top_padding 52, \
+    bspc config window_gap 46; bspc config -m Virtual1 top_padding 66 \
   }
 
 alt + shift + o

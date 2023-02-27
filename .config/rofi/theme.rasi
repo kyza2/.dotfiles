@@ -1,13 +1,8 @@
+@import "~/.cache/wal/colors-rofi-dark"
+
 * {
-  bg0: #101318;
-  bg1: #29303d;
-
-  fg0: #4c5566;
-  fg1: #637799;
-
   background-color: transparent;
 
-  text-color: @fg0;
   text-style: none;
 
   accent: #4D8DDE;
@@ -27,13 +22,14 @@ window {
   width: 350px;
   height: 450px;
 
-  background-color: @bg0;
+  background-color: @background;
 
   fixed-height:     false;
   max-height:       false;
 
-  border: 2px;
-  border-color: @bg1;
+
+  border: 1px;
+  /* border-color: @bg1; */
 }
 
 listview {
@@ -43,19 +39,19 @@ listview {
 
 inputbar {
   width: 200px;
-  border: 0px 0px 2px 0px;
-  border-color: @bg1;
+  border: 0px 0px 1px 0px;
+  /* border-color: @bg1; */
 
   padding: 17px 0px 24px 20px;
   margin: 12px 0px 0px 0px;
 }
 
 entry {
-  text-color: @fg1;
+  /* text-color: @fg1; */
 }
 
 prompt {
-  text-color: @fg0;
+  /* text-color: @fg0; */
   font: "NKDuy Mono Bold 8.3";
 
   padding: 0px 0px 0px 0px;
@@ -67,7 +63,7 @@ element {
 }
 
 element selected normal, element selected active {
-  text-color: @fg1;
+  /* text-color: @fg1; */
 }
 
 element-text {
