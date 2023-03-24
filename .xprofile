@@ -7,6 +7,9 @@ xset r rate 190 110
 # VitualBox intergration
 VBoxClient-all
 
+# Imwheel
+imwheel
+
 picom &
 
 # Set Theme

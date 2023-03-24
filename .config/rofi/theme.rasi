@@ -2,9 +2,7 @@
 
 * {
   background-color: transparent;
-
   text-style: none;
-
   accent: #4D8DDE;
 }
 
@@ -16,56 +14,44 @@ mainbox {
 window {
   location: center;
   anchor: center;
-
   border-radius: 9px;
-
   width: 350px;
   height: 450px;
-
   background-color: @background;
-
   fixed-height:     false;
   max-height:       false;
-
-
   border: 1px;
-  /* border-color: @bg1; */
 }
 
 listview {
   layout: vertical;
-  padding: 0px 0px 12px 16px;
 }
 
 inputbar {
-  width: 200px;
   border: 0px 0px 1px 0px;
-  /* border-color: @bg1; */
-
-  padding: 17px 0px 24px 20px;
-  margin: 12px 0px 0px 0px;
+  padding: 17px 0px 24px 13px;
+  margin: 12px 0px 12px 0px;
 }
 
 entry {
-  /* text-color: @fg1; */
+  padding: 0px 0px 0px 10px;
 }
 
 prompt {
-  /* text-color: @fg0; */
-  font: "NKDuy Mono Bold 8.3";
-
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
 
 element {
-  padding: 15px 0px 0px 0px;
-}
-
-element selected normal, element selected active {
-  /* text-color: @fg1; */
+  border-radius: 4px;
+  padding: 12px 8px 12px 8px;
 }
 
 element-text {
   text-color: inherit;
+  vertical-align: 0.7;
+}
+
+element-icon {
+  size: 20px;
 }

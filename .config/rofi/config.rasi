@@ -1,7 +1,8 @@
 configuration {
-  font: "NKDuy Mono Bold 8.3";
+  /* font: "NKDuy Mono Bold 8.3"; */
+  font: "Cartograph CF 8.3";
 
-  display-drun: "";
+  display-drun: "";
   display-emoji: "";
   drun-display-format: "{icon} {name}";
 

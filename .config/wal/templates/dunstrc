@@ -36,12 +36,12 @@
 
   sort = yes
 
-  font = NKDuy Mono 9.5
+  font = Cartograph CF 8.5
 
   line_height = 6
 
   markup = full
-  format = "<b>%s</b>\n%b"
+  format = %s \n\n%b
 
   vertical_alignment = center
 
@@ -92,14 +92,14 @@
 [urgency_low]
   background = "{background}"
   foreground = "{color8}"
-  frame_color = "{color1}"
+  frame_color = "{color4}"
 
 [urgency_normal]
   background = "{background}"
   foreground = "{color8}"
-  frame_color = "{color1}"
+  frame_color = "{color4}"
 
 [urgency_critical]
   background = "{background}"
   foreground = "{color8}"
-  frame_color = "{color10}"
+  frame_color = "{color5}"

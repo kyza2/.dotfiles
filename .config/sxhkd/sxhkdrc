@@ -24,7 +24,7 @@ F11
 
 # Change Theme
 F12
-  wal_random.sh ~/.wallpapers/
+  wal -i ~/.wallpapers/; wal_update.sh
 
 # F12
 #   wal -i ~/.wallpapers/ | pkill dunst
@@ -40,6 +40,7 @@ alt + shift + s
 # Run programs
 alt + d
   rofi -show drun
+
 
 # Run programs
 alt + shift + d
@@ -91,8 +92,14 @@ alt + shift + r
 	bspc wm -r
 
 # Close and kill
-alt + {_,shift + }q
-	bspc node -{c,k}
+# alt + {_,shift + }q
+# 	bspc node -{c,k}
+
+alt + q
+	kill_windows.sh
+
+alt + shift + q
+  bspc node -c
 
 # Send the newest marked node to the newest preselected node
 alt + y
@@ -165,5 +172,5 @@ alt + w : {h, j, k, l}
   }
 
 # Resize floating windows
-alt + r : alt + {h,j,k,l}
-	bspwm_resize.sh {west,south,north,east}
+# alt + r : alt + {h,j,k,l}
+# 	bspwm_resize.sh {west,south,north,east}

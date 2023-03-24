@@ -1,28 +1,8 @@
 
-# if [ "$GREETED" != "true" ]; then
-#     # Display greeting
-#     echo "
-# 
-#     █████   ████  ███   █████     █████
-#    ░░███   ███░  ░░░   ░░███     ░░███
-#     ░███  ███    ████  ███████   ███████   █████ ████
-#     ░███████    ░░███ ░░░███░   ░░░███░   ░░███ ░███
-#     ░███░░███    ░███   ░███      ░███     ░███ ░███
-#     ░███ ░░███   ░███   ░███ ███  ░███ ███ ░███ ░███
-#     █████ ░░████ █████  ░░█████   ░░█████  ░░███████
-#    ░░░░░   ░░░░ ░░░░░    ░░░░░     ░░░░░    ░░░░░███
-#                                             ███ ░███
-#                                            ░░██████
-#                                             ░░░░░░
-#     "
-# 
-#     wal --preview
-# 
-#     export GREETED=true
-# fi
-
 export LC_ALL=en_US.UTF-8
 export EDITOR=nvim
+
+export PATH="$PATH:/home/evan/.cargo/bin"
 
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ [\1]/'
@@ -30,8 +10,8 @@ parse_git_branch() {
 
 setopt PROMPT_SUBST
 
-PS1=' %F{magenta}%/%F{white}$(parse_git_branch)
-%F{green}%  -> %F{white}'
+PS1='%F{magenta}%/%F{white}$(parse_git_branch)
+%F{green}% 󰄾 %F{white}'
 
 alias g="lazygit"
 
@@ -41,28 +21,27 @@ alias lt="ls --tree"
 
 alias feh="feh --bg-fill"
 
-# update_theme() {
-#     wal -i $1
-#     pkill dunst
-#     bspc wm -r
+# theme() {
+#    wal --theme $1
+#    wal_update.sh
 # }
-#
-# alias wal=update_theme
+
+alias theme='function() { wal --theme "$1"; wal_update.sh; }'
+
+generate() {
+   wal -i $1
+   wal_update.sh
+}
+
+alias generate='function() { wal -i "$1"; wal_update.sh; }'
 
 alias ..="cd .."
 
 alias .nv="cd ~/.config/nvim/"
-alias .e="cd ~/.config/emacs/"
-alias .gn="cd ~/.config/goneovim/"
 
-alias gn="~/goneovim/goneovim -u ~/.config/goneovim/nvim/init.lua"
 alias nv="nvim"
 alias vi="vim"
 alias lf='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias http="ngrok http"
 
 alias icat="kitty +kitten icat"
-
-# image=$(find ~/kitty_startup/ -type f | shuf -n 1)
-# icat $image
-#

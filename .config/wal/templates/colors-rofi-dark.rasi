@@ -13,9 +13,9 @@
   alternate-urgent-background: @background;
   alternate-urgent-foreground: @foreground;
 
-  selected-active-background: {color1};
+  selected-active-background: rgba({color8.rgb}, 0.2);
   selected-active-foreground: {color15};
-  selected-normal-background: {color1};
+  selected-normal-background: {color8};
   selected-normal-foreground: @foreground;
   selected-urgent-background: {color3};
   selected-urgent-foreground: @foreground;
@@ -23,25 +23,23 @@
   background-color: @background;
   background: {background};
   foreground: {foreground};
-  border-color: {color1};
+  border-color: {color4};
   spacing: 2;
 }}
 
 #window {{
   background-color: @background;
   border: 0;
-  padding: 2.5ch;
 }}
 
 #mainbox {{
   border: 0;
-  padding: 0;
+  padding: 12px 24px 0px 24px;
 }}
 
 #message {{
-  border: 2px 0px 0px;
+  border: 0px 0px 0px;
   border-color: @border-color;
-  padding: 1px;
 }}
 
 #textbox {{
@@ -54,28 +52,21 @@
 
 #textbox-prompt-colon {{
   expand: false;
-  str: ":";
-  margin: 0px 0.3em 0em 0em;
   text-color: @normal-foreground;
 }}
 
 #listview {{
   fixed-height: 0;
-  /* border: 2px 0px 0px; */
   border-color: @border-color;
   spacing: 2px;
-  scrollbar: true;
-  padding: 2px 0px 0px;
 }}
 
 #element {{
   border: 0;
-  padding: 1px;
 }}
 
 #element-text, element-icon {{
-  background-color: inherit;
-  text-color:       inherit;
+  text-color: inherit;
 }}
 
 #element.normal.normal {{
@@ -94,6 +85,7 @@
 }}
 
 #element.selected.normal {{
+  background-color: @selected-active-background;
   text-color: @selected-active-foreground;
 }}
 
@@ -124,7 +116,6 @@
   width: 4px;
   border: 0;
   handle-width: 8px;
-  padding: 0;
 }}
 
 #sidebar {{
@@ -144,7 +135,6 @@
 #inputbar {{
   spacing: 0;
   text-color: @normal-foreground;
-  padding: 1px;
 }}
 
 #case-indicator {{

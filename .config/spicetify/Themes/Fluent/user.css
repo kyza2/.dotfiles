@@ -1,7 +1,7 @@
 :root {
-  --border-radius-1: 13px;
-  --border-radius-2: 13px;
-  --border-radius-3: 13px;
+  --border-radius-1: 2px;
+  --border-radius-2: 4px;
+  --border-radius-3: 6px;
   --glue-font-weight-normal: 400;
   --glue-font-weight-bold: 600;
   --glue-font-weight-black: 700;
@@ -9,10 +9,34 @@
   --scrollbar-vertical-size: 8px;
   --filter-brightness: 1;
   --green: #1db954;
+
+  --background-lightened-2: linear-gradient(
+      rgba(150, 150, 150, 0.2),
+      rgba(150, 150, 150, 0.2)
+    ),
+    var(--spice-main);
+
+  --background-lightened-1: linear-gradient(
+      rgba(60, 60, 60, 0.1),
+      rgba(60, 60, 60, 0.1)
+    ),
+    var(--spice-main);
+
+  --background-shaded-2: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    var(--spice-main);
+}
+
+.eSMjmiD29Ox35O95waw6::before,
+.eSMjmiD29Ox35O95waw6::after {
+  content: unset;
 }
 
 html {
   overflow: hidden;
+}
+
+.Root__top-container {
+  background: var(--background-shaded-2);
 }
 
 #spicetify-playlist-list .GlueDropTarget--playlists {
@@ -22,7 +46,7 @@ html {
 * {
   /* font-family: "Segoe UI", sans-serif !important; */
   /* font-family: "Cartograph CF", monospace !important; */
-  /* font-size: 11px !important; */
+  /* font-size: 12px !important; */
   line-height: normal;
   box-shadow: none !important;
   -webkit-mask-repeat: no-repeat;
@@ -32,7 +56,8 @@ html {
 
 .Root__main-view {
   z-index: 0;
-  background-color: var(--spice-main);
+  /* background-color: var(--spice-main); */
+  background: var(--background-shaded-2);
   height: 100%;
 }
 
@@ -46,7 +71,7 @@ div.GlueDropTarget.personal-library > * {
 
 .os-scrollbar-handle {
   border-radius: 50px;
-  background: var(--spice-button-disabled) !important;
+  background: var(--spice-accent) !important;
 }
 
 .os-theme-spotify > .os-scrollbar-vertical {
@@ -61,16 +86,22 @@ div.GlueDropTarget.personal-library > * {
   max-width: 100vw !important;
 }
 
+.playlist-playlist-playlistContent {
+  background: none !important;
+}
+
 .main-home-homeHeader,
 .main-actionBarBackground-background {
   background-image: none;
+  background: none !important;
 }
 
 .main-actionBarBackground-background,
 .main-home-homeHeader,
 .x-entityHeader-overlay,
 .x-actionBarBackground-background {
-  background-color: var(--spice-main) !important;
+  background: var(--background-shaded-2);
+  height: 100%;
 }
 
 .main-topBar-background,
@@ -80,11 +111,11 @@ div.GlueDropTarget.personal-library > * {
 }
 
 .main-entityHeader-overlay {
-  background-image: linear-gradient(
-    to bottom,
-    rgb(39 39 39 / 0%),
-    var(--spice-main)
-  );
+  background: none !important;
+}
+
+.main-entityHeader-backgroundColor {
+  background: none !important;
 }
 
 .x-actionBarBackground-background,
@@ -97,7 +128,7 @@ div.GlueDropTarget.personal-library > * {
 
 .main-trackList-trackListHeaderRow,
 .main-trackCreditsModal-header {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   border-bottom: none;
 }
 
@@ -141,7 +172,7 @@ div.GlueDropTarget.personal-library > * {
 .view-homeShortcutsGrid-shortcut,
 .OALAQFKvC7XQOVYpklB4,
 .L4WROPnQ7MPGhylvVyxd {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   box-shadow: 0px 4px 4px -4px var(--spice-layer-shadow) !important;
   border: 1px var(--spice-contour) solid;
 }
@@ -187,7 +218,7 @@ div.GlueDropTarget.personal-library > * {
   width: 100vw !important;
   grid-area: none;
   z-index: 4 !important;
-  background: var(--spice-sidebar);
+  background: var(--background-lightened-1);
 }
 
 .main-topBar-container {
@@ -295,7 +326,7 @@ h3,
 ._60cb742e518d084c3c959007b9463b51-scss {
   border-radius: var(--border-radius-1);
   border: 1px solid var(--spice-layer-shadow);
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .queue-tabBar-dropdownItemLink {
@@ -406,11 +437,12 @@ h3,
 }
 
 .main-collectionLinkButton-collectionLinkButton[href="/collection/tracks"] {
-  background: linear-gradient(135deg, #450af5, #c4efd9) !important;
+  background: none !important;
 }
 
 .main-collectionLinkButton-collectionLinkButton[href="/collection/episodes"] {
   background-color: #006450 !important;
+  display: none !important;
 }
 
 .main-collectionLinkButton-collectionLinkButton[href="/collection/tracks"]
@@ -486,7 +518,7 @@ button.switch {
 
 .main-buttons-button,
 .show-followButton-button {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   font-weight: normal;
   font-size: 15px;
   letter-spacing: 0px;
@@ -506,7 +538,7 @@ button.switch {
 }
 
 .main-button-outlined {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .main-button-secondary {
@@ -519,7 +551,7 @@ button.switch {
 
 .x-carousel-button,
 .x-removeButton-RemoveButton {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .x-carousel-button svg {
@@ -530,6 +562,7 @@ button.switch {
 
 .Root__nav-bar {
   z-index: 1 !important;
+  background: var(--background-lightened-1);
   max-width: 85px !important;
   height: calc(100% + 107px);
 }
@@ -552,9 +585,6 @@ button.switch {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  box-shadow: -8px -8px 0 var(--spice-sidebar);
-  border-left: 1px solid var(--spice-dark-border);
-  border-top: 1px solid var(--spice-dark-border);
   border-right: none;
   border-bottom: none;
   pointer-events: none;
@@ -573,7 +603,7 @@ button.switch {
 }
 
 .main-navBar-navBarLink svg {
-  transform: translateX(-3px);
+  /* transform: translateX(-3px); */
 }
 
 .main-navBar-entryPoints {
@@ -630,7 +660,7 @@ button.switch {
 .main-rootlist-rootlistItemLink:visited,
 .main-rootlist-rootlistPlaylistHeader {
   color: var(--spice-text);
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   background-size: cover;
   border-radius: var(--border-radius-2);
   cursor: pointer;
@@ -704,7 +734,7 @@ button.switch {
 
 .main-trackList-indexable .main-virtualScrollList-wrapper,
 .main-trackList-indexable .main-rootlist-wrapper {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   border-radius: var(--border-radius-2);
   padding: 20px;
 }
@@ -718,7 +748,7 @@ button.switch {
   padding: 0px;
   margin: 0px;
   border-bottom: none;
-  background: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .main-trackList-trackListRow {
@@ -849,7 +879,7 @@ button.switch {
 }
 
 .x-filterBox-filterInput {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   color: var(--spice-text);
 }
 
@@ -898,16 +928,8 @@ button.switch {
   margin-top: 48px;
 }
 
-[class="main-entityHeader-backgroundColor"] {
-  opacity: min(calc(var(--filter-brightness) + 0.4), 1);
-}
-
 .main-entityHeader-container {
-  background-image: linear-gradient(
-    to bottom,
-    rgb(255 255 255 / 0%),
-    var(--spice-main)
-  );
+  background: none !important;
 }
 
 .main-entityHeader-metaDataText,
@@ -938,14 +960,14 @@ button.switch {
 
 .show-trailer-container,
 .show-show-episodes > :last-child {
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
 }
 
 /* top bar */
 
 .main-topBar-button,
 .main-userWidget-box {
-  background-color: var(--spice-sidebar);
+  background: var(--background-lightened-1);
 }
 
 .main-entityHeader-topbarTitle,
@@ -988,7 +1010,7 @@ a[class*="-tabBar-headerItemLink"]:active {
 .x-searchInput-searchInputInput,
 .dIwMadpRrW1PwEwEeAbN,
 .G9iUss4eOSpJyn2VBzsS {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   color: var(--spice-text) !important;
   border: 1px solid var(--spice-light-border);
   border-radius: var(--border-radius-2) !important;
@@ -1062,7 +1084,7 @@ a[class*="-tabBar-headerItemLink"]:active {
 
 .main-heroCard-card,
 .x-searchResultsTracks-root .main-gridContainer-gridContainer {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   border-radius: var(--border-radius-1);
 }
 
@@ -1105,12 +1127,12 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 .main-playlistEditDetailsModal-titleInput:focus,
 .main-playlistEditDetailsModal-descriptionTextarea:focus,
 .playlist-inlineSearchBox-filterInput {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .profile-userEditDetails-nameInput,
 .profile-userEditDetails-textElement:focus {
-  background: var(--spice-card) !important;
+  background: var(--background-lightened-1);
 }
 
 .main-playlistEditDetailsModal-titleInput:focus,
@@ -1121,7 +1143,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 
 .playlist-inlineSearchBox-filterInput {
-  border: 1px solid var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .main-playlistEditDetailsModal-titleInput,
@@ -1148,7 +1170,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 
 .main-deletePlaylistDialog-container,
 .main-deleteFolderDialog-container {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   color: var(--spice-text);
   border-radius: var(--border-radius-1);
 }
@@ -1190,7 +1212,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 
 .main-addFriendsView-filterInput {
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
   color: var(--spice-text) !important;
 }
 
@@ -1222,7 +1244,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 }
 
 .main-buddyFeed-friendActivity {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
   border-radius: var(--border-radius-1);
   margin: 8px;
   padding: 8px 8px 8px 12px;
@@ -1250,7 +1272,7 @@ path[d="M23 0C10.298 0 0 10.297 0 23c0 12.702 10.298 23 23 23 12.703 0 23-10.298
 
 .main-dropDown-dropDown,
 option {
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
   color: var(--spice-text);
 }
 
@@ -1259,7 +1281,7 @@ option {
 }
 
 .x-toggle-indicator {
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
 }
 
 .x-settings-facebookButton,
@@ -1273,7 +1295,7 @@ option {
 
 .x-proxySettings-proxyInput {
   border-radius: var(--border-radius-2) !important;
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
 }
 
 .x-proxySettings-proxyInput::placeholder {
@@ -1348,6 +1370,7 @@ option {
 
 .Root__now-playing-bar {
   padding-right: 6px;
+  background: var(--background-lightened-1);
   margin: 0px 13px 13px 13px;
   width: calc(100% - 26px);
   box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25) !important;
@@ -1357,6 +1380,7 @@ option {
 
 .main-nowPlayingBar-container {
   border-radius: var(--border-radius-1);
+  background: var(--background-lightened-1);
 }
 
 .gqeP9Y0_y6DLm4CD_m3Q {
@@ -1527,7 +1551,7 @@ option {
 .main-coverSlotCollapsed-expandButton:hover,
 .kyn0AY4_gXWvbdivdFgP,
 .kyn0AY4_gXWvbdivdFgP:hover {
-  background-color: var(--spice-card);
+  background: var(--background-lightened-1);
 }
 
 .now-playing-bar .cover-art-image {
@@ -1707,5 +1731,5 @@ option {
 .main-topBar-button[title="Popup Lyrics"],
 .main-topBar-button[title="Full App Display"],
 .main-topBar-button[title="Bookmark"] {
-  background-color: var(--spice-card) !important;
+  background: var(--background-lightened-1);
 }
