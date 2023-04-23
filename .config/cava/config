@@ -1,0 +1,46 @@
+
+[general]
+framerate = 60
+
+lower_cutoff_freq = 40
+higher_cutoff_freq = 16000
+
+FFTbufferSize = 9
+sensitivity = 180
+
+bars = 0
+bar_width = 1
+bar_spacing = 1
+
+overshoot = -13
+
+autosens = 1
+
+[output]
+
+method = ncurses
+channels = mono
+mono_option = average
+
+[color]
+
+gradient = 1
+gradient_color_1 = '#72b6ff'
+gradient_color_2 = '#54a0f2'
+gradient_color_3 = '#4492e5'
+gradient_color_4 = '#518ccc'
+gradient_color_5 = '#4787cc'
+gradient_color_6 = '#5098e5'
+gradient_color_7 = '#59a9ff'
+gradient_color_8 = '#72b6ff'
+
+[smoothing]
+monstercat = 1
+
+[eq]
+
+1 = 0.40
+2 = 0.80
+3 = 0.90
+4 = 0.80
+5 = 0.70
