@@ -31,7 +31,7 @@ icons:
 indicators: false
 
 # Layout
-layout: oneline
+layout: grid
 
 # Recursion
 recursion:
@@ -62,4 +62,4 @@ hyperlink: never
 symlink-arrow: ⇒
 
 # Header
-header: false
+header: true

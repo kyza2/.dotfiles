@@ -1,7 +1,7 @@
 * {{
   active-background: {color2};
   active-foreground: {color8};
-  normal-background: @background;
+  normal-background: @color0;
   normal-foreground: {color8};
   urgent-background: {color1};
   urgent-foreground: @foreground;
@@ -17,11 +17,10 @@
   selected-active-foreground: {color15};
   selected-normal-background: {color8};
   selected-normal-foreground: @foreground;
-  selected-urgent-background: {color3};
+  selected-urgent-background: {color0};
   selected-urgent-foreground: @foreground;
-
   background-color: @background;
-  background: {background};
+  background: {color0};
   foreground: {foreground};
   border-color: {color4};
   spacing: 2;

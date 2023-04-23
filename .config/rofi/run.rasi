@@ -12,12 +12,14 @@ mainbox {
 }
 
 window {
-  location: center;
-  anchor: center;
+  location: east;
+  anchor: north;
   border-radius: 9px;
   width: 350px;
   height: 450px;
   background-color: @background;
+  y-offset: 20px;
+  x-offset: -195px;
   fixed-height: false;
   max-height: false;
   border: 1px;
@@ -38,7 +40,7 @@ inputbar .icon {
 } 
 
 entry {
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 0px;
   vertical-align: 0.8;
 }
 
@@ -51,11 +53,16 @@ prompt {
 
 element {
   border-radius: 4px;
-  padding: 12px 8px 12px 8px;
+  padding: 12px 8px 12px -10px;
+}
+
+element-text selected {
+text-color: @foreground;
 }
 
 element-text {
   text-color: inherit;
+  highlight: none;
   vertical-align: 0.7;
 }
 

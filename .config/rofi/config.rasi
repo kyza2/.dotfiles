@@ -1,6 +1,7 @@
 configuration {
   /* font: "NKDuy Mono Bold 8.3"; */
   font: "Cartograph CF 8.3";
+  /* font: "Sono SemiBold 8.3"; */
 
   display-drun: "";
   display-emoji: "";

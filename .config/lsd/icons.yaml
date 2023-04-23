@@ -1,0 +1,20 @@
+name:
+  downloads: ""
+  projects: ""
+  images: ""
+  plugins: ""
+  notes: ""
+  github: ""
+extension:
+  go: ""
+  hs: ""
+filetype:
+  dir: ""
+  file: ""
+  socket: ""
+  executable: ""
+  symlink-dir: ""
+  symlink-file: ""
+  device-char: ""
+  device-block: "ﰩ"
+  special: ""
