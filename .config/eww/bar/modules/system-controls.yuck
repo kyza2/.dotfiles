@@ -1,0 +1,59 @@
+(defwidget system-controls []
+  (box :class "system-controls" :space-evenly false
+    (microphone) (volume-slider) (wifi) (power)
+  )
+)
+
+(defwidget microphone []
+  (box :class "microphone" 
+    (button :onclick "notify-send heyo" "󰍬")
+  )
+)
+
+(defpoll volume-slider	:interval "1s" "bar/scripts/system-info/volume-slider.sh")
+(defpoll slider-volume :interval "1s" "examples/slider.sh")
+
+
+(defvar volume-revealed false)
+
+(defwidget volume-slider []
+  (eventbox :class "volume-slider"
+            :onhover "eww update volume-revealed=true"
+            :onhoverlost "eww update volume-revealed=false"
+
+    (box :space-evenly false
+      (button "")
+
+      (revealer :reveal volume-revealed 
+                :space-evenly false
+                :transition "slideleft"
+
+        (box :class "slider-vol" 
+             :orientation "h" 
+             :space-evenly "false"
+             :space-evenly false
+
+          (scale :min 0
+                 :max 101
+                 :value slider-volume
+                 :onchange "amixer -D pulse sset Master {}%; dunstify 'Volume: ${slider-volume}% ' -r 3333 "
+          )
+        )
+      )
+    )
+  )
+)
+
+(defpoll wifi	:interval "1s" "bar/scripts/system-info/wifi.sh")
+
+(defwidget wifi []
+  (box :class "wifi" 
+    (button :onclick "notify-send test" "")
+  )
+)
+
+(defwidget power []
+  (box :class "power" 
+    (button :onclick "notify-send test" "󰤆")
+  )
+)

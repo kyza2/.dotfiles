@@ -12,7 +12,7 @@
   height = 300
 
   origin = top-right
-  offset = 20x27
+  offset = 21x81
 
   gap_size = 10
 
@@ -38,6 +38,7 @@
   sort = yes
 
   font = Cartograph CF 8.5
+  # font = Lotion Heavy 9.5
 
   line_height = 6
 
@@ -92,14 +93,14 @@
 [urgency_low]
   background = "{color0}"
   foreground = "{color7}"
-  frame_color = "{color8}"
+  frame_color = "{color9}"
 
 [urgency_normal]
   background = "{color0}"
   foreground = "{color7}"
-  frame_color = "{color8}"
+  frame_color = "{color9}"
 
 [urgency_critical]
   background = "{color0}"
   foreground = "{color7}"
-  frame_color = "{color8}"
+  frame_color = "{color9}"

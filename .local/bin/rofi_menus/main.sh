@@ -1,17 +1,20 @@
 #!/bin/bash
 
+option() {
+  echo "<span font='Nerd Font Symbols' size='$1' color='$(xrdb -query | grep $2: | tail -c 8)' baseline-shift='$3'>$4</span> $5"
+}
+
 menu_options=(
-  "<span size='13pt' color='$(xrdb -query | grep "color1:" | tail -c 8)' baseline-shift='-2.5pt'></span>  Sound"
-  "<span size='11pt' color='$(xrdb -query | grep "color2:" | tail -c 8)' baseline-shift='-1.3pt'>󰶍</span>  Mail"
-  "<span size='12pt' color='$(xrdb -query | grep "color3:" | tail -c 8)' baseline-shift='-1.8pt'></span>  Bookmarks"
-  "<span size='11pt' color='$(xrdb -query | grep "color4:" | tail -c 8)' baseline-shift='-1.8pt'>󰄀</span>  Screenshot"
-  "<span size='11pt' color='$(xrdb -query | grep "color5:" | tail -c 8)' baseline-shift='-1.1pt'>󱞁</span>  Notes"
-  "<span size='12pt' color='$(xrdb -query | grep "color6:" | tail -c 8)' baseline-shift='-1.8pt'></span>  Wallpaper"
-  "<span size='12pt' color='$(xrdb -query | grep "color9:" | tail -c 8)' baseline-shift='-1.8pt'></span>  Theme"
-  "<span size='10pt' color='$(xrdb -query | grep "color2:" | tail -c 8)' baseline-shift='-1.8pt'></span>  Processes"
-  "<span size='10pt' color='$(xrdb -query | grep "color1:" | tail -c 8)' baseline-shift='-1.8pt'>󰤆</span>  Power"
-
-
+  "$(option '13pt' 'color1' '-2.5pt' ' ' 'Sound')"
+  "$(option '11pt' 'color2' '-1.3pt' '󰶍 ' 'Mail')"
+  "$(option '12pt' 'color3' '-1.8pt' ' ' 'Bookmarks')"
+  "$(option '11pt' 'color4' '-1.8pt' '󰄀 ' 'Screenshot')"
+  "$(option '11pt' 'color5' '-1.8pt' ' ' 'Appearance')"
+  "$(option '11pt' 'color6' '-1.1pt' '󱞁 ' 'Notes')"
+  "$(option '12pt' 'color1' '-1.8pt' ' ' 'Wallpaper')"
+  "$(option '12pt' 'color2' '-1.8pt' ' ' 'Theme')"
+  "$(option '10pt' 'color3' '-1.8pt' ' ' 'Processes')"
+  "$(option '10pt' 'color4' '-1.8pt' '󰤆 ' 'Power')"
 )
 
 menu_options_string=$(printf '%s\n' "${menu_options[@]}")
@@ -22,55 +25,21 @@ if [[ $selected_option == "" ]]; then
   exit 0
 fi
 
-if [[ $selected_option == !w* ]]; then
-
-  # wikipedia
-  firefox "https://en.wikipedia.org/w/index.php?title=Special:Search&search=$(echo "$selected_option" | sed 's/^!w //;s/ /+/g')"
-elif [[ $selected_option == !yt* ]]; then
-
-  # Youtube
-  firefox "https://www.youtube.com/results?search_query=$(echo "$selected_option" | sed 's/^!y //;s/ /+/g')"
-elif [[ $selected_option == !gh* ]]; then
-
-  # Github
-  firefox "https://github.com/search?q=$(echo "$selected_option" | sed 's/^!gh //;s/ /+/g')&type=code"
-elif [[ $selected_option == !r* ]]; then
-
-  # Reddit
-  firefox "https://www.reddit.com/search?q=$(echo "$selected_option" | sed 's/^!r //;s/ /+/g')"
-elif [[ $selected_option == !a* ]]; then
-
-  # Archlinux
-  firefox "https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=$(echo "$selected_option" | sed 's/^!a //;s/ /+/g')"
-else
-  case "$selected_option" in
-      # Sound
-    "${menu_options[0]}") ~/scripts/rofi_menus/sound.sh ;;
-
-      # Mail
-    "${menu_options[1]}") firefox https://outlook.live.com/mail/0 ;;
-
-      # Bookmarks
-    "${menu_options[2]}") ~/scripts/rofi_menus/bookmarks.sh ;;
-
-      # Screenshot
-    "${menu_options[3]}") ~/scripts/rofi_menus/scrot.sh ;;
-
-      # Notes
-    "${menu_options[4]}") cd ~/Notes/; kitty ;;
-
-      # Wallpaper
-    "${menu_options[5]}") ~/scripts/rofi_menus/wallpaper.sh ;;
-
-      # Theme
-    "${menu_options[6]}") ~/scripts/rofi_menus/theme.sh ;;
-
-      # Processes
-    "${menu_options[7]}") kitty btm -b ;;
-
-      # Power
-    "${menu_options[8]}") ~/scripts/rofi_menus/power.sh ;;
-
-    *) firefox "https://duckduckgo.com/?q=$(echo "$selected_option" | sed 's/ /%20/g')" ;;
-  esac
-fi
+case "$selected_option" in
+  !w*) firefox "https://en.wikipedia.org/w/index.php?title=Special:Search&search=$(echo "$selected_option" | sed 's/^!w //;s/ /+/g')";;
+  !yt*) firefox "https://www.youtube.com/results?search_query=$(echo "$selected_option" | sed 's/^!y //;s/ /+/g')";;
+  !gh*) firefox "https://github.com/search?q=$(echo "$selected_option" | sed 's/^!gh //;s/ /+/g')&type=code";;
+  !r*) firefox "https://www.reddit.com/search?q=$(echo "$selected_option" | sed 's/^!r //;s/ /+/g')";;
+  !a*) firefox "https://wiki.archlinux.org/index.php?title=Special%3ASearch&search=$(echo "$selected_option" | sed 's/^!a //;s/ /+/g')";;
+  "${menu_options[0]}") ~/scripts/rofi_menus/sound.sh ;;
+  "${menu_options[1]}") firefox https://outlook.live.com/mail/0 ;;
+  "${menu_options[2]}") ~/scripts/rofi_menus/bookmarks.sh ;;
+  "${menu_options[3]}") ~/scripts/rofi_menus/scrot.sh ;;
+  "${menu_options[4]}") lxappearance ;;
+  "${menu_options[5]}") cd ~/Notes/; kitty ;;
+  "${menu_options[6]}") ~/scripts/rofi_menus/wallpaper.sh ;;
+  "${menu_options[7]}") ~/scripts/rofi_menus/theme.sh ;;
+  "${menu_options[8]}") kitty btm -b ;;
+  "${menu_options[9]}") ~/scripts/rofi_menus/power.sh ;;
+  *) firefox "https://duckduckgo.com/?q=$(echo "$selected_option" | sed 's/ /%20/g')" ;;
+esac

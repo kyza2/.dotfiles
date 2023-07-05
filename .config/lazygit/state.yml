@@ -1,9 +1,12 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/evan/Projects/indexr-next-13
+- /home/evan/Plugins/color-space.nvim
 - /home/evan/.dotfiles
-- /home/evan/Projects/indexr
-- /home/evan/Github/spt-album-art-preview
-- /home/evan/Github/mgba
+- /home/evan/Projects/jreem-portfolio-next-13
+- /home/evan/Projects/pomodoro
+- /home/evan/Projects/next-auth
+- /home/evan/.themes
 - /home/evan/Plugins/harmony.nvim
 - /home/evan/.config/nvim
 - /home/evan/.dotfiles/.config/nvim

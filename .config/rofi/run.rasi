@@ -18,7 +18,7 @@ window {
   width: 350px;
   height: 450px;
   background-color: @background;
-  y-offset: 20px;
+  y-offset: 70px;
   x-offset: -195px;
   fixed-height: false;
   max-height: false;

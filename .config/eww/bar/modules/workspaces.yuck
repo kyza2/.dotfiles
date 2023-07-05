@@ -1,0 +1,15 @@
+(deflisten workspaces :initial "[]" "bar/scripts/workspaces.sh")
+
+(defwidget workspaces []
+  (box :orientation "h"
+       :class "workspaces"
+    (for workspace in workspaces
+       (eventbox :onclick "bspc desktop -f ${workspace.id}"
+                 :class "${workspace.state == "active" ? "active" : "inactive"}"
+                 :cursor "pointer"
+                 ; "${workspace.state == "active" ? "󰮯" : "󱙝"}"
+                 "${workspace.id}"
+      )
+    )
+  )
+)

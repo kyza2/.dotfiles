@@ -3,6 +3,8 @@ syntax enable
 set background=dark
 set termguicolors
 
+colorscheme habamax
+
 let &t_ut=''
 
 set path+=**
@@ -36,20 +38,20 @@ set noswapfile
 set autoread
 set nobackup
 
-" " For Xorg
-" function XClipPaste()
-"   let @c=system("xclip -o -sel clip") 
-"   :normal "cp<CR>
-" endfunction
-"
-" " Paste
-" nnoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
-" inoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
-" vnoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
-"
-" " Copy
-" vnoremap <silent> <C-c> "cy <bar> :call system('xclip -sel clipboard', @c)<CR>h
-" xnoremap <silent> <C-c> "cy <bar> :call system('xclip -sel clipboard', @c)<CR>h
+" For Xorg
+function XClipPaste()
+  let @c=system("xclip -o -sel clip") 
+  :normal "cp<CR>
+endfunction
+
+" Paste
+nnoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
+inoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
+vnoremap <silent> <C-v> <cmd>call XClipPaste()<CR>
+
+" Copy
+vnoremap <silent> <C-c> "cy <bar> :call system('xclip -sel clipboard', @c)<CR>h
+xnoremap <silent> <C-c> "cy <bar> :call system('xclip -sel clipboard', @c)<CR>h
 
 " Quit vime
 nnoremap Q ZZ

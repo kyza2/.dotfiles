@@ -1,5 +1,6 @@
+
 # Create a copy of the Firefox bookmarks database
-cp $HOME/.mozilla/firefox/v9dya03m.default-release-1679578892857/places.sqlite /tmp/bookmarks.sqlite
+cp $HOME/.mozilla/firefox/j3gv1ge9.default-release/places.sqlite /tmp/bookmarks.sqlite
 
 # Get list of Firefox bookmarks from the copy
 bookmarks=$(sqlite3 /tmp/bookmarks.sqlite "SELECT moz_bookmarks.id, moz_bookmarks.title, moz_places.url FROM (moz_bookmarks INNER JOIN moz_places ON moz_bookmarks.fk=moz_places.id) WHERE moz_bookmarks.parent IS NOT 1 AND moz_bookmarks.parent IS NOT 2 AND moz_bookmarks.title IS NOT NULL ORDER BY moz_bookmarks.lastModified DESC;")

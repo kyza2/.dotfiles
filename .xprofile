@@ -2,7 +2,7 @@
 xrandr -s 1920x1080
 
 # Set repeat rate
-xset r rate 190 110
+xset r rate 170 90
 
 export PATH="$HOME/.local/bin:$PATH"
 

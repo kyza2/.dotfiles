@@ -1,0 +1,222 @@
+
+.bar {
+  background-color: $bar-background;
+  border-bottom: $border-width solid $color9;
+  border: $border-width solid $color9;
+  // border-top: none;
+  color: $color7;
+  padding: $y-padding $x-padding;
+  border-radius: $bar-border-radius;
+  // border-bottom: 4px solid #1b1e21;
+  border-bottom: 1px solid $color9;
+  // border-bottom-left-radius: $bar-border-radius;
+  // border-bottom-right-radius: $bar-border-radius;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+}
+
+button {
+  font-weight: 500;
+  border-top-left-radius: $border-radius;
+  border-bottom-left-radius: $border-radius;
+}
+
+label, button, widget {
+  transition: all 0.15s cubic-bezier(0.61, 1, 0.88, 1);
+}
+
+.time {
+   padding: 0 0.7em 0 0;
+}
+.time button { 
+  background: $color4;
+  color: $color9;
+  font-size: 15px;
+  padding: 0 0.7em;
+  margin-right: 0.8em;
+}
+
+.time, .spotify, .system-controls, .memory, .cpu, .date {
+  // border: $border-width solid $color9;
+  border: 1px solid $color9;
+  border-radius: $border-radius;
+}
+
+/* -- Left -------------------------------------- */
+
+.left {
+
+  /* -- Time -------------------------------------- */
+
+  .time {
+    background: $background;
+    // box-shadow: $box-shadow;
+    margin-right: 0.7em;
+  }
+
+  /* -- Workspaces -------------------------------- */
+
+  .workspaces {
+    margin-bottom: 2px;
+    margin: 0px 5px 0px 10px;
+  }
+
+  .workspaces .inactive label {
+    color: $color8;
+    border-bottom: 2px solid transparent;
+    padding: 0 1.1em;
+  }  
+
+  .workspaces .active label  {
+    color: $color7;
+    border-bottom: 2px solid $color5;
+    padding: 0 1.1em;
+  }
+
+  .workspaces .active {
+    color: $color7;
+  }
+
+  .workspaces .inactive {
+    color: $color8;
+  }
+
+  /* -- Spotify -------------------------------- */
+
+  .spotify {
+    margin-left: 10px;
+    padding-right: 10px;
+    background: $background;
+    // box-shadow: $box-shadow;
+  }
+
+  .spotify .album-art {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+    transition: background 0.13s cubic-bezier(0.7, 0, 0.84, 0);
+  }
+
+  .spotify .play-pause {
+    font-size: 16px
+  }
+
+  .spotify .play-pause:hover {
+    color: $foreground;
+  }
+
+  .spotify .duration {
+    background-color: $color1;
+    min-height: 2px;
+  }
+}
+
+/* -- Right ------------------------------------- */
+
+.right {
+
+  /* -- System Info -------------------------------- */
+
+  .memory, .cpu, .date {
+    background: $background;
+    margin-right: 0.9em;
+    padding: 0 0.7em 0 0;
+    min-width: 25px;
+  }
+
+  .memory button, .cpu button, .date button {
+    padding: 0 0.7em;
+    margin-right: 0.5em;
+    font-family: $symbols;
+    color: $color9;
+    font-size: 15px;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+
+  .memory button { background: $color4; }
+  .date button { background: $color5; margin-right: 0.8em;}
+  .cpu button { background: $color3; }
+
+
+  .date button {
+    font-size: 15px;
+  }
+
+  .battery button {
+    font-size: 20px;
+    margin: 0em 1em;
+  }
+
+  .menu {
+    font-family: $symbols;
+    font-size: 15px;
+    padding-right: 1em;
+    padding-top: 0.1em;
+  }
+
+  /* -- System Controls ---------------------------- */
+
+  .system-controls {
+    font-size: 13px;
+
+    background: $background;
+    // box-shadow: $box-shadow;
+  }
+
+  .system-controls button {
+    font-family: $symbols;
+  }
+
+  .microphone, .volume-slider, .wifi {
+    padding: 0 1.8em
+  }
+
+  .microphone    { color: $color1; padding-left: 1.2em }
+  .volume-slider { color: $color4 }
+  .wifi          { color: $color5; padding-right: 1.2em  }
+
+  .power { 
+    color: $color0;
+    // box-shadow: 0px 4px 0px 0px #4b707f;
+  }
+
+  .power {
+    padding: 0 1em;
+    // margin: 4px 6px;
+    background: $color4;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
+
+/* -- Examples Volume Slider  ---------------------------- */
+
+.slider-vol {
+  padding: 0 10px
+}
+
+
+.slider-vol trough slider {
+  border-radius: 8px;
+  min-height: 10px;
+  min-width: 10px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  background-color: $color7;
+}
+
+.slider-vol trough highlight {
+  background-color: $color4;
+}
+
+.slider-vol button {
+  font-family: $symbols;
+}
+
+.slider-vol trough {
+  background-color: $color8;
+  min-height: 2px;
+  min-width: 130px;
+}

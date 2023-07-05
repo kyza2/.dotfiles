@@ -1,0 +1,59 @@
+(include "bar/modules/time.yuck")
+(include "bar/modules/workspaces.yuck")
+(include "bar/modules/spotify.yuck")
+
+(defwidget modules-left []
+  (box :class "left" 
+       :orientation "h" 
+       :space-evenly false
+    (time)
+    (workspaces)
+    (spotify)
+  )
+)
+
+(include "bar/modules/xworkspace.yuck")
+
+(defwidget modules-center []
+  (box :class "center" 
+       :orientation "h" 
+       :hexpand true
+       (xworkspace)
+  )
+)
+
+(include "bar/modules/system-info.yuck")
+(include "bar/modules/system-controls.yuck")
+(include "bar/modules/date.yuck")
+
+
+(defwidget modules-right []
+  (box :class "right" 
+       :orientation "h" 
+       :space-evenly false
+      (system-info)
+      (system-controls)
+  )
+)
+
+(defwidget bar []
+  (box :class "bar"
+       :orientation "h"
+       :space-evenly false
+    (modules-left)
+    (modules-center)
+    (modules-right)
+  )
+)
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "55px"
+                      :anchor "top center")
+  :reserve (struts :side "top" :distance "45px")
+  (bar)
+)

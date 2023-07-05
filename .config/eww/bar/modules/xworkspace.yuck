@@ -1,0 +1,9 @@
+(deflisten xworkspace :initial "" "bar/scripts/xworkspace.sh")
+
+(defwidget xworkspace []
+  (label :class "xworkspace"
+         :orientation "h"
+         :text xworkspace
+         :limit-width 45
+  )
+)

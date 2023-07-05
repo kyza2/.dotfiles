@@ -1,0 +1,36 @@
+(deflisten spotify :initial "" "bar/scripts/spotify/scroller.sh")
+(deflisten spotify-status :initial "" "bar/scripts/spotify/playerctl.sh")
+(deflisten spotify-album-art :initial "" "bar/scripts/spotify/album-art.sh")
+(defpoll song-duration :interval "1s" "bar/scripts/spotify/song-duration.sh")
+
+(defpoll song :interval "1s" "bar/scripts/spotify/song-details.sh")
+
+(defwidget spotify []
+  (box :orientation "h"
+       :class "spotify"
+       :space-evenly false
+    ; Use background-image instead of
+    ; 'image' widget so we can apply styling
+    (box :class "album-art"
+         :style `background-image: url('${spotify-album-art}');
+                 min-width: ${spotify != "Nothing playing" ? "36px" : "-1px"};`
+    )
+
+     ; (box :class "duration"
+     ;      :style '${spotify != "Nothing playing" ?  "margin-right: -${song-duration}px" : "background-color: unset"}'
+     ;      :valign "end"
+     ; )
+
+    ; Fixes z-scroll jittering caused by label size
+    ; change with '<200b>' zero width space.
+    (label :text "​${spotify}​"
+           :style "min-width: 290px"
+    )
+
+    ; (eventbox :class "play-pause"
+    ;           :cursor "pointer"
+    ;           :onclick "playerctl play-pause"
+    ;           "${spotify != "Nothing playing" ? ( spotify-status != "Playing" ? "󰐍  " : "󰏦  " ) : ""}"
+    ; )
+  )
+)

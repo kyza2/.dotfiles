@@ -1,0 +1,29 @@
+(defwidget system-info []
+  (box :class "info" :space-evenly false :halign "end"
+    (menu) (cpu) (memory) (date)
+  )
+)
+
+(defpoll memory	:interval "1s" "bar/scripts/system-info/memory.sh")
+
+(defwidget memory []
+  (box :class "memory" 
+    (button :onclick "notify-send test" "󰍛")
+    (label :text "${memory}%")
+  )
+)
+
+(defpoll cpu	:interval "1s" "bar/scripts/system-info/cpu.sh")
+
+(defwidget cpu []
+  (box :class "cpu" 
+    (button :onclick "notify-send test" "󰁫")
+    (label :text "${cpu}%")
+  )
+)
+
+(defwidget menu []
+  (box :class "menu" 
+    (eventbox :onclick "notify-send test" :cursor "pointer" " ")
+  )
+)

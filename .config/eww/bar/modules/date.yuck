@@ -1,0 +1,15 @@
+(defpoll date :interval "1m" 'date +"%A, %B %d, %Y"')
+(defpoll date-alt :interval "1m" 'date +"%m/%d/%Y"')
+
+(defvar show-alt true)
+
+(defwidget date[]
+  (box :class "date" 
+    :space-evenly false
+    (button "")
+    (eventbox 
+      :cursor "pointer"
+      :onclick "eww update show-alt=${!show-alt}"
+      '${show-alt ? date-alt : date}')
+  )
+)

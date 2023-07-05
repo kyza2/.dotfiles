@@ -10,6 +10,10 @@ blocks:
   - date
   - name
 
+ignore-globs:
+  - .git
+  - node_modules
+
 # Color
 color:
   when: always
@@ -23,7 +27,7 @@ dereference: false
 
 # Icons
 icons:
-  when: auto
+  when: never
   theme: fancy
   separator: "  "
 

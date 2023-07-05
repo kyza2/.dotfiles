@@ -1,30 +1,20 @@
-#
-#   █████████              █████      █████          █████
-#  ███░░░░░███            ░░███      ░░███          ░░███ 
-# ░███    ░░░  █████ █████ ░███████   ░███ █████  ███████ 
-# ░░█████████ ░░███ ░░███  ░███░░███  ░███░░███  ███░░███ 
-#  ░░░░░░░░███ ░░░█████░   ░███ ░███  ░██████░  ░███ ░███ 
-#  ███    ░███  ███░░░███  ░███ ░███  ░███░░███ ░███ ░███ 
-# ░░█████████  █████ █████ ████ █████ ████ █████░░████████
-#  ░░░░░░░░░  ░░░░░ ░░░░░ ░░░░ ░░░░░ ░░░░ ░░░░░  ░░░░░░░░ 
-
 # Toggle polybar
-ctrl + alt + p
+alt + ctrl + p
   { \
-    polybar-msg cmd show; bspc config -m Virtual1 bottom_padding 45; bspc config window_gap 44, \
-    polybar-msg cmd hide; bspc config -m Virtual1 bottom_padding 0; bspc config window_gap 0 \
+    eww open --toggle bar; bspc config -m Virtual1 top_padding 0; bspc config window_gap 13, \
+    eww open --toggle bar; bspc config -m Virtual1 top_padding 61; bspc config window_gap 71, \
   }
 
 # Toggle fullscreen
 F11
   { \
-    bspc node -t '~fullscreen'; polybar-msg cmd hide, \
-    bspc node -t '~fullscreen'; polybar-msg cmd show \
+    bspc node -t '~fullscreen'; eww open --toggle bar, \
+    bspc node -t '~fullscreen'; eww open --toggle bar \
   }
 
 # Change theme
-F12
-  wal -i ~/.wallpapers/; wal_update.sh
+# F12
+#   wal -i ~/.wallpapers/; wal_update.sh
 
 # Screenshot selection
 alt + s
@@ -33,6 +23,12 @@ alt + s
 # Screenshot window
 alt + shift + s
   ~/scripts/scrot.sh window
+
+alt + e
+  nemo
+
+ctrl + alt + t
+  ~/scripts/rofi_menus/theme.sh
 
 # Run programs
 alt + d
@@ -73,12 +69,20 @@ alt + shift + c
   gpick -o -s --no-newline | xclip -sel c
 
 # Launch Kitty
-alt + Return
-	kitty
+# alt + Return
+# 	kitty
+
+alt + shift + Return
+  xterm -sh 1.23
 
 # Terminal emulator fallback
-alt + shift + Return
-	xterm -sh 1 -bg "#0F1010" -fg "#aaaaaa"
+alt + Return
+  xterm -sh 1.23 -fa "IntelOne Mono Medium" -fs 9.6
+	# xterm -sh 1.46 -fa "InputMono Medium" -fs 9.7
+	# xterm -sh 1.44 -fa "Roboto Mono SemiBold" -fs 9.8
+	# xterm -sh 1.45 -fa "Fira Code Medium" -fs 9.6
+  # xterm -sh 1.23 -fa "Source Code Pro Medium" -fs 9.6
+  # xterm -sh 1.39 -fa "CommitMono" -fs 9.6
 
 # Extract text
 alt + t
@@ -109,7 +113,7 @@ alt + shift + q
 
 # Set the window state
 alt + f
-	bspc node -t {floating, tiled} | xdo resize -w 900 -h 891
+	bspc node -t {floating, tiled} | xdo resize -w 900 -h 892
 
 # Set the window state to sticky
 ctrl + alt + s
@@ -122,10 +126,10 @@ alt + {_,shift + }{h,j,k,l}
 # Cycle gap sizes
 alt + o
   { \
-    bspc config window_gap 13; bspc config -m Virtual1 bottom_padding 52, \
-    bspc config window_gap 69; bspc config -m Virtual1 bottom_padding 62, \
-    bspc config window_gap 0; bspc config -m Virtual1 bottom_padding 52, \
+    eww open bar; bspc config -m Virtual1 top_padding 55; bspc config window_gap -1;, \
+    eww open bar; bspc config -m Virtual1 top_padding 59; bspc config window_gap 33, \
   }
+# eww open bar; bspc config -m Virtual1 top_padding 55; bspc config window_gap -1;, \
 
 # Toggle borders
 alt + shift + b

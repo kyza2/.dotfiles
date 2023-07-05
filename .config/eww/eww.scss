@@ -1,0 +1,10 @@
+* {
+  all: unset // Reset all styles
+}
+
+@import "styles/fonts.scss"
+@import "styles/colors.scss"
+@import "styles/metrics.scss"
+
+// Widgets
+@import "bar/main.scss"

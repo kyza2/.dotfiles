@@ -24,14 +24,18 @@ mainbox {
 }
 
 window {
-  location: center;
-  anchor: center;
   font: "AppleColorEmoji 19";
 
   border-radius: 9px;
 
   width: 350px;
   height: 462px;
+
+  location: east;
+  anchor: north;
+
+  y-offset: 70px;
+  x-offset: -195px;
 
   background-color: @bg0;
 
