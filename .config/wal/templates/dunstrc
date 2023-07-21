@@ -38,6 +38,7 @@
   sort = yes
 
   font = Cartograph CF 8.5
+  # font = Intel One Mono Medium 8.5
   # font = Lotion Heavy 9.5
 
   line_height = 6

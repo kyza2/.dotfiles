@@ -1,5 +1,6 @@
 configuration {
   /* font: "NKDuy Mono Bold 8.3"; */
+  /* font: "Intel One Mono Medium 8.3"; */
   font: "Cartograph CF 8.3";
   /* font: "Lotion ExtraBold 10.7"; */
   /* font: "Sono SemiBold 8.3"; */

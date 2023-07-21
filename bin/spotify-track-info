@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Get the current player status
+status=$(playerctl status 2> /dev/null)
+
+# Check if Spotify is currently playing
+if [[ $status == "Playing" && $(playerctl metadata --format "{{ playerName }}" 2> /dev/null) == "spotify" ]]; then
+  # Get the name and artist of the current track
+  title=$(playerctl metadata title)
+  artist=$(playerctl metadata artist)
+
+  # Print the track information
+  echo "$title - $artist"
+else
+  echo "Spotify is not currently playing."
+fi
