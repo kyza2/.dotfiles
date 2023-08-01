@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Start the xwinwrap process with mpv playing the gif
+xwinwrap -ov -fs -- mpv --wid=$(xdotool getactivewindow) --keepaspect=no --loop=inf ~/.wallpapers/city.gif &
+
+# Let's give it a moment to ensure the mpv window is up
+sleep 1
+
+# Get the Window ID of the mpv window
+WID=$(xdotool search --onlyvisible --classname mpv)
+
+# If we found a valid Window ID, set its properties
+if [ -n "$WID" ]; then
+    # Make the window floating
+    bspc node "$WID" --state floating
+
+    # Resize the window to your screen resolution
+    # Assuming that the monitor is already set to 1920x1080
+    xdotool windowsize "$WID" 1920 1080
+else
+    echo "Could not find the mpv window. Please make sure xwinwrap and mpv are working correctly."
+    exit 1
+fi
