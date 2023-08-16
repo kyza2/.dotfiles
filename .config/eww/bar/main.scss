@@ -95,6 +95,7 @@ label, button, widget {
   .spotify .album-art {
     border-top-left-radius: $border-radius;
     border-bottom-left-radius: $border-radius;
+    padding-left: 4px;
     transition: background 0.13s cubic-bezier(0.7, 0, 0.84, 0);
   }
 
