@@ -24,9 +24,7 @@ mainbox {
 }
 
 window {
-  font: "AppleColorEmoji 19";
-
-  border-radius: 9px;
+  font: "JoyPixels 19";
 
   width: 350px;
   height: 462px;
@@ -76,7 +74,6 @@ element {
 }
 
 element selected normal, element selected active {
-  border-radius: 8px;
   background-color: @bg1;
   text-color: @fg1;
 }

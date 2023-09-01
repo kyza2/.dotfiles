@@ -1,38 +1,6 @@
-# Toggle polybar
-alt + ctrl + p
-  { \
-    eww open --toggle bar; bspc config -m Virtual1 bottom_padding 0; bspc config window_gap 13, \
-    eww open --toggle bar; bspc config -m Virtual1 bottom_padding 61; bspc config window_gap 71, \
-  }
-
-# Toggle fullscreen
-F11
-  { \
-    bspc node -t '~fullscreen'; eww open --toggle bar, \
-    bspc node -t '~fullscreen'; eww open --toggle bar \
-  }
-
-# Change theme
-# F12
-#   wal -i ~/.wallpapers/; wal_update.sh
-
-# Screenshot selection
-alt + s
-  ~/scripts/rofi_menus/scrot.sh
-
-# Screenshot window
-alt + shift + s
-  ~/scripts/scrot.sh window
-
-alt + e
-  nemo
-
-ctrl + alt + t
-  ~/scripts/rofi_menus/theme.sh
-
 # Run programs
 alt + d
-  ~/scripts/rofi_menus/apps.sh
+  rofi -show drun
 
 alt + b
   ~/scripts/rofi_menus/bookmarks.sh
@@ -41,20 +9,14 @@ alt + b
 alt + @space
   ~/scripts/rofi_menus/main.sh
 
+
 # Run programs
 alt + shift + d
   rofi -show run
 
+# Resource inspector
 alt + shift + p
   kitty btm -b
-
-# Play / pause song
-alt + p
-  playerctl play-pause
-
-# Next / previous Song
-alt + bracket{left,right}
-  playerctl {previous,next}
 
 # Emoji menu
 alt + period
@@ -68,20 +30,16 @@ alt + {Prior,Next}
 alt + shift + c
   gpick -o -s --no-newline | xclip -sel c
 
-# Launch Kitty
-# alt + Return
-# 	kitty
+alt + n
+  neovide --multigrid
 
+# Launch Kitty
+alt + Return
+  kitty
+
+# Fallback emulator
 alt + shift + Return
   xterm -sh 1.23
-
-# Terminal emulator fallback
-alt + Return
-  xterm -sh 1.5 -fa "Iosevka Comfy Wide Motion Fixed" -fs 9.8
-  # xterm -sh 1.5 -fa "Fragment Mono" -fs 10.4
-  # xterm -sh 1.5 -fa "Roboto Mono Semibold" -fs 9.8
-  # xterm -sh 1.5 -fa "Iosevka Custom" -fs 10.8
-  # xterm -sh 1.5 -fa "Iosevka Habamax" -fs 10.8
 
 # Extract text
 alt + t
@@ -100,7 +58,6 @@ alt + {_,shift + }{1-9,0}
 # Close and kill
 alt + {_,shift + }q
 	bspc node -{c,k}
-
 
 # Quit/restart BSPWM
 alt + shift + r
@@ -123,18 +80,6 @@ ctrl + alt + s
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# Cycle gap sizes
-alt + o
-  { \
-    eww open bar; bspc config -m Virtual1 bottom_padding 55; bspc config window_gap -1;, \
-    eww open bar; bspc config -m Virtual1 bottom_padding 54; bspc config window_gap 33, \
-  }
-# eww open bar; bspc config -m Virtual1 bottom_padding 55; bspc config window_gap -1;, \
-
-# Toggle borders
-alt + shift + b
-  bspc config border_width { 0, 1 }
-
 # Resize splits
 alt + ctrl + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -143,3 +88,5 @@ alt + ctrl + {h,j,k,l}
 alt + r : {h, j, k, l}
   bspc node -v {-10 0, 0 10, 0 -10, 10 0} 
 
+alt + o
+  {bspc config window_gap 20, bspc config window_gap 0}

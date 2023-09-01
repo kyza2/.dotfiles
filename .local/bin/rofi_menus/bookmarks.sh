@@ -22,7 +22,7 @@ while IFS="|" read -r id title url; do
 done <<< "$bookmarks"
 
 # Show the rofi menu with the bookmark options
-selected_option=$(printf "%s\n" "${titles[@]}" | rofi -dmenu -i -theme ~/.config/rofi/run.rasi -p "   ")
+selected_option=$(printf "%s\n" "${titles[@]}" | rofi -dmenu -i -p "   ")
 
 if [ -n "$selected_option" ]; then
   index=$(printf '%s\n' "${titles[@]}" | grep -x -n "$selected_option" | cut -d: -f1)

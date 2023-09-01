@@ -1,6 +1,6 @@
 foreground         {foreground}
-background         {background}
-cursor             {color4}
+background         {color0}
+cursor             {cursor}
 
 active_tab_foreground     {background}
 active_tab_background     {foreground}

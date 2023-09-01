@@ -1,52 +1,58 @@
-#! /bin/sh
-
-# VitualBox intergration
-VBoxClient-all
-
-# Imwheel
-imwheel &
-
-# Compsitor
- # picom &
-
-# Set Theme
-wal -R
-
-# ~/.config/polybar/launch.sh &
-eww open bar
-
-
-~/.config/bspwm/scripts/swallow &
+#!/bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc config ignore_ewmh_struts true
+xrandr --output HDMI-1 --primary --mode 1920x1080 --rate 120 --output eDP-1 --mode 1920x1080 --right-of HDMI-1 
 
-bspc monitor -d 1 2 3 4
-bspc monitor Virtual2 -d 6 7 8 9
+xset r rate 170 90 # Set repeat rate
+xmodmap $HOME/.Xmodmap & # Override keys
 
-bspc config window_gap 47
-bspc config -m Virtual1 bottom_padding 77
-bspc config -m Virtual1 top_padding 0
+# Limit resources for CPU and Ryzen processor
+
+# Set the maximum frequency of the CPU
+cpupower frequency-set -u 2.0Ghz 
+
+ryzenadj --stapm-limit=45000 --fast-limit=45000 --slow-limit=45000 --tctl-temp=80
+
+asusctl -c 85
+asusctl profile -P Quiet
+
+xfce4-power-manager
+
+bspc monitor HDMI-1 -d 1 2 3 4
+bspc monitor eDP-1  -d 5 6 7 8
+
+killall -q polybar | polybar & # Statusbar
+
+picom & # Compsitor
+sxhkd & # Shortcut daemon 
+
+export MANGOHUD_CONFIGFILE=$HOME/.config/MangoHud/MangoHud.conf
+
+wal -R # Set Theme
+
+# source the colors.
+exec $HOME/.config/polybar/launch.sh &
+
+. $HOME/.cache/wal/colors.sh 
+
+bspc config normal_border_color "$color9"
+bspc config normal_border_color "$color9"
+bspc config focused_border_color "$color8"
+bspc config active_border_color "$color8"
 
 bspc config border_width 1
 
-# source the colors.
-. "${HOME}/.cache/wal/colors.sh"
+bspc config window_gap  10
+bspc config top_padding 34
 
-# feh --bg-max -B "$color0" ~/.wallpapers/Background.png
+bspc config ignore_ewmh_struts true
 
-# Set the border colors.
-bspc config normal_border_color "$color9"
-bspc config active_border_color "$color9"
-bspc config focused_border_color "$color9"
-
-# Use the line below iyou are on bspwm >= 0.9.4
-bspc config presel_feedback_color "$color1"
-
-bash /home/evan/.config/bspwm/bspwm_colors.sh &
-
-xsetroot -cursor_name left_ptr
+xsetroot -cursor_name left_ptr &
 
 export GTK_THEME=Lavanda-Sea-Dark
 export ICON_THEME=Colloid-dark
+export XCURSOR_PATH=${XCURSOR_PATH}:~/.local/share/icons
+export XCURSOR_THEME=Bibata-Modern-Classic
+
+

@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark"
+@import "~/.cache/wal/rofi"
 
 * {
  background-color: transparent;
@@ -12,12 +12,13 @@ mainbox {
 }
 
 window {
-  location: center;
-  anchor: center;
-  border-radius: 9px;
-  width: 350px;
+  location: south west;
+  anchor: south west;
+  width: 850px;
   height: 450px;
   background-color: @background;
+  y-offset: -15px;
+  x-offset: 15px;
   fixed-height: false;
   max-height: false;
   border: 1px;
@@ -25,6 +26,7 @@ window {
 
 listview {
   layout: vertical;
+  columns: 4;
 }
 
 inputbar {
@@ -38,7 +40,7 @@ inputbar .icon {
 } 
 
 entry {
-  padding: 0px 0px 0px 10px;
+  padding: 0px 0px 0px 0px;
   vertical-align: 0.8;
 }
 
@@ -51,11 +53,18 @@ prompt {
 
 element {
   border-radius: 4px;
-  padding: 12px 8px 12px 8px;
+  padding: 12px 12px 12px 12px;
+  margin: 0px 0px 0px 0px;
+}
+
+element-text selected {
+text-color: @foreground;
 }
 
 element-text {
   text-color: inherit;
+  padding: 0px 0px 0px 6px;
+  highlight: none;
   vertical-align: 0.7;
 }
 

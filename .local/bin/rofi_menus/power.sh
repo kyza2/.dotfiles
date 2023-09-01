@@ -8,7 +8,7 @@ menu_options=(
 
 menu_options_string=$(printf '%s\n' "${menu_options[@]}")
 
-selected_option=$(echo -e "$menu_options_string" | rofi -dmenu -i -markup-rows -theme ~/.config/rofi/run.rasi -p "󰤆   ")
+selected_option=$(echo -e "$menu_options_string" | rofi -dmenu -i -markup-rows -p "󰤆   ")
 
 case "$selected_option" in
   "${menu_options[0]}") shutdown now ;;

@@ -9,7 +9,7 @@ menu_options=(
 )
 
 menu_options_string=$(printf '%s\n' "${menu_options[@]}")
-selected_option=$(echo -e "$menu_options_string" | rofi -dmenu -theme ~/.config/rofi/run.rasi -i -markup-rows -p "󰋋   ")
+selected_option=$(echo -e "$menu_options_string" | rofi -dmenu -i -markup-rows -p "󰋋   ")
 
 case "$selected_option" in
   "${menu_options[0]}") playerctl play-pause ;;

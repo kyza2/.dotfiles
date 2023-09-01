@@ -26,7 +26,7 @@ for file in "$wallpapers_dir"/*; do
 done
 
 # Modified to pass menu options array to rofi
-selected_option=$(printf '%s\n' "${menu_options[@]}" | rofi -dmenu -i -markup-rows -theme ~/.config/rofi/run.rasi -p "󰥶   ")
+selected_option=$(printf '%s\n' "${menu_options[@]}" | rofi -dmenu -i -markup-rows -p "󰥶   ")
 
 if [ $? -eq 1 ]; then
   exit

@@ -21,7 +21,7 @@ for file in "$themes_dir"/*; do
   fi
 done
 
-selected_theme=$(printf '%s\n' "${menu_options[@]}" | rofi -dmenu -i -markup-rows -theme ~/.config/rofi/run.rasi -p "󰥶   " )
+selected_theme=$(printf '%s\n' "${menu_options[@]}" | rofi -dmenu -i -markup-rows -p "󰥶   " )
 
 if [ $? -eq 1 ]; then
   exit
